@@ -1,6 +1,8 @@
-I made this fork of the main Ushahidi instance because I was encountering problems running it after installation due to a conflict with the PHP installation on my web server.
+I made this fork of the main Ushahidi instance because I was encountering problems running it after installation 
+due to a conflict with the PHP installation on my web server.
 
-It's not a problem everyone will encounter, but if you're getting "Fatal error: Call to undefined method Locale::get_i18n()" after completing the install, this might help.
+It's not a problem everyone will encounter, but if you're getting 
+"Fatal error: Call to undefined method Locale::get_i18n()" after completing the install, this might help.
 
 If you'd prefer to do it manually, or are having trouble, here's my step by step: 
 
