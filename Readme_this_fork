@@ -1,0 +1,17 @@
+I made this fork of the main Ushahidi instance because I was encountering problems running it after installation due to a conflict with the PHP installation on my web server.
+
+It's not a problem everyone will encounter, but if you're getting "Fatal error: Call to undefined method Locale::get_i18n()" after completing the install, this might help.
+
+If you'd prefer to do it manually, or are having trouble, here's my step by step: 
+
+1. Rename the file application/helpers/locale.php to locate.php
+2. In application/helpers/locate.php, change line 10 to: 
+class locate_Core
+3. In application/helpers/locate.php, change line 507 to:   	
+$directories[$i18n_dir] = locate::language($locale[0])." (".$locale[1].")";
+4. In application/libraries/themes.php, change line 214 to:
+$locales = locate::get_i18n();
+5. In application/controllers/admin/settings.php, change line 362 to:
+$locales = locate::get_i18n();
+6. In application/controllers/admin/manage.php, change line 56 to:	
+$locales = locate::get_i18n();
